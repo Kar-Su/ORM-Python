@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:'Your mysql version'
+    container_name: database
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOT_DB_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${USER_DB}
+      MYSQL_PASSWORD: ${USER_DB_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - vol-db-'your volumes':/var/lib/mysql
+
+volumes:
+  'your volumes': {}

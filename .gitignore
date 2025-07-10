@@ -1,0 +1,7 @@
+*.bak
+apps.py
+docker-compose.yml.bak
+*.sql
+__pycache__
+6f358c8070c6*
+
